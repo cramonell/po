@@ -1,0 +1,333 @@
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix dot: <https://w3id.org/dot#> .
+@prefix ifc: <https://w3id.org/po-ifc#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dce:contributor a owl:AnnotationProperty .
+
+dce:creator a owl:AnnotationProperty .
+
+dce:date a owl:AnnotationProperty .
+
+dce:description a owl:AnnotationProperty .
+
+dce:identifier a owl:AnnotationProperty .
+
+dce:language a owl:AnnotationProperty .
+
+dce:title a owl:AnnotationProperty .
+
+dot:Inspection rdfs:subClassOf ifc:Task .
+
+ifc:actualDate_EventTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "ActualDate" ;
+    rdfs:domain ifc:EventTime ;
+    rdfs:range xsd:string .
+
+ifc:actualDuration_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "ActualDuration" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:actualFinish_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "ActualFinish" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:actualStart_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "ActualStart" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:completion_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "Completion" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:float .
+
+ifc:dataOrigin_SchedulingTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "DataOrigin" ;
+    rdfs:domain ifc:SchedulingTime ;
+    rdfs:range xsd:string .
+
+ifc:decomposes_Process a owl:ObjectProperty ;
+    rdfs:label "Decomposes" ;
+    rdfs:domain ifc:Process ;
+    rdfs:range ifc:Process .
+
+ifc:description_Process a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "Description" ;
+    rdfs:domain ifc:Process ;
+    rdfs:range xsd:string .
+
+ifc:durationType_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "DurationType" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:earlyDate_EventTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "EarlyDate" ;
+    rdfs:domain ifc:EventTime ;
+    rdfs:range xsd:string .
+
+ifc:earlyFinish_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "EarlyFinish" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:earlyStart_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "EarlyStart" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:eventOccurenceTime_Event a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "EventOccurenceTime" ;
+    rdfs:domain ifc:Event ;
+    rdfs:range ifc:EventTime .
+
+ifc:eventTriggerType_Event a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "EventTriggerType" ;
+    rdfs:domain ifc:Event ;
+    rdfs:range xsd:string .
+
+ifc:freeFloat_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "FreeFloat" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:globalId_Process a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "GlobalId" ;
+    rdfs:domain ifc:Process ;
+    rdfs:range xsd:string .
+
+ifc:identification_Process a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "Identification" ;
+    rdfs:domain ifc:Process ;
+    rdfs:range xsd:string .
+
+ifc:isCritical_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "IsCritical" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:boolean .
+
+ifc:isDecomposedBy_Process a owl:ObjectProperty ;
+    rdfs:label "IsDecomposedBy" ;
+    rdfs:domain ifc:Process ;
+    rdfs:range ifc:Process .
+
+ifc:isMilestone_Task a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "IsMilestone" ;
+    rdfs:domain ifc:Task ;
+    rdfs:range xsd:boolean .
+
+ifc:isNestedBy_Process a owl:ObjectProperty ;
+    rdfs:label "IsNestedBy" ;
+    rdfs:domain ifc:Process ;
+    rdfs:range ifc:Process .
+
+ifc:isPredecessorTo_Process a owl:ObjectProperty ;
+    rdfs:label "IsPredecessorTo" ;
+    rdfs:domain ifc:Process ;
+    rdfs:range ifc:Process .
+
+ifc:isSuccessorFrom_Process a owl:ObjectProperty ;
+    rdfs:label "IsSuccessorFrom" ;
+    rdfs:domain ifc:Process ;
+    rdfs:range ifc:Process .
+
+ifc:lateDate_EventTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "LateDate" ;
+    rdfs:domain ifc:EventTime ;
+    rdfs:range xsd:string .
+
+ifc:lateFinish_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "LateFinish" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:lateStart_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "LateStart" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:longDescription_Process a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "LongDescription" ;
+    rdfs:domain ifc:Process ;
+    rdfs:range xsd:string .
+
+ifc:name_Process a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "Name" ;
+    rdfs:domain ifc:Process ;
+    rdfs:range xsd:string .
+
+ifc:name_SchedulingTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "Name" ;
+    rdfs:domain ifc:SchedulingTime ;
+    rdfs:range xsd:string .
+
+ifc:nests_Process a owl:ObjectProperty ;
+    rdfs:label "Nests" ;
+    rdfs:domain ifc:Process ;
+    rdfs:range ifc:Process .
+
+ifc:objectType_Process a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "ObjectType" ;
+    rdfs:domain ifc:Process ;
+    rdfs:range xsd:string .
+
+ifc:operatesOn_Process a owl:ObjectProperty ;
+    rdfs:label "OperatesOn" ;
+    rdfs:domain ifc:Process .
+
+ifc:priority_Task a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "Priority" ;
+    rdfs:domain ifc:Task ;
+    rdfs:range xsd:integer .
+
+ifc:remainingTime_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "RemainingTime" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:scheduleDate_EventTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "ScheduleDate" ;
+    rdfs:domain ifc:EventTime ;
+    rdfs:range xsd:string .
+
+ifc:scheduleDuration_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "ScheduleDuration" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:scheduleFinish_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "ScheduleFinish" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:scheduleStart_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "ScheduleStart" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:statusTime_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "StatusTime" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:status_Task a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "Status" ;
+    rdfs:domain ifc:Task ;
+    rdfs:range xsd:string .
+
+ifc:taskTime_Task a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "TaskTime" ;
+    rdfs:domain ifc:Task ;
+    rdfs:range ifc:TaskTime .
+
+ifc:totalFloat_TaskTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "TotalFloat" ;
+    rdfs:domain ifc:TaskTime ;
+    rdfs:range xsd:string .
+
+ifc:userDefinedDataOrigin_SchedulingTime a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "UserDefinedDataOrigin" ;
+    rdfs:domain ifc:SchedulingTime ;
+    rdfs:range xsd:string .
+
+ifc:userDefinedEventTriggerType_Event a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "UserDefinedEventTriggerType" ;
+    rdfs:domain ifc:Event ;
+    rdfs:range xsd:string .
+
+ifc:workMethod_Task a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "WorkMethod" ;
+    rdfs:domain ifc:Task ;
+    rdfs:range xsd:string .
+
+ifc: a owl:Ontology ;
+    cc:license "http://creativecommons.org/licenses/by/3.0/" ;
+    dce:abstract "This Ontology is automatically created from the EXPRESS schema 'IFC4X3_ADD2' using the IFCExpress2OWL_Proces custom converter developed  by Carlos Ramonell (carlos.ramonell@upc.edu)" ;
+    dce:creator "Carlos Ramonell Cazador (carlos.ramonell@upc.edu)" ;
+    dce:date "2024/03/27" ;
+    dce:description "OWL ontology to describe processes in the built environment. It is based on the Proces ontology descibed in IFC (Insutry Foundation Classes) schema." ;
+    dce:identifier "Proces Ontology" ;
+    dce:language "en" ;
+    dce:title "Proces Ontology" ;
+    vann:preferredNamespacePrefix "po" ;
+    vann:preferredNamespaceUri "https://w3id.org/po-ifc#" ;
+    owl:versionIRI ifc: ;
+    owl:versionInfo "1.0" .
+
+ifc:Procedure a owl:Class ;
+    rdfs:subClassOf ifc:Process ;
+    owl:disjointWith ifc:Event,
+        ifc:Task .
+
+ifc:SchedulingTime a owl:Class ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf ( ifc:EventTime ifc:TaskTime ) ] .
+
+ifc:Event a owl:Class ;
+    rdfs:subClassOf ifc:Process ;
+    owl:disjointWith ifc:Procedure,
+        ifc:Task .
+
+ifc:EventTime a owl:Class ;
+    rdfs:subClassOf ifc:SchedulingTime ;
+    owl:disjointWith ifc:TaskTime .
+
+ifc:Task a owl:Class ;
+    rdfs:subClassOf ifc:Process ;
+    owl:disjointWith ifc:Event,
+        ifc:Procedure .
+
+ifc:TaskTime a owl:Class ;
+    rdfs:subClassOf ifc:SchedulingTime ;
+    owl:disjointWith ifc:EventTime .
+
+ifc:Process a owl:Class ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf ( ifc:Event ifc:Procedure ifc:Task ) ] .
+
